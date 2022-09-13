@@ -1,0 +1,28 @@
+digraph {
+	subgraph "cluster11,732" {
+		y [label="y
+~
+Binomial" style=filled]
+		y_obs [label="y_obs
+~
+Data" shape=box style="rounded, filled"]
+		X_obs [label="X_obs
+~
+Data" shape=box style="rounded, filled"]
+		label="11,732" labeljust=r labelloc=b style=rounded
+	}
+	beta [label="beta
+~
+HalfNormal"]
+	theta [label="theta
+~
+Beta"]
+	alpha [label="alpha
+~
+HalfNormal"]
+	y -> y_obs
+	beta -> theta
+	alpha -> theta
+	theta -> y
+	X_obs -> y
+}

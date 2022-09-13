@@ -1,0 +1,35 @@
+digraph {
+	subgraph "cluster11,732" {
+		y [label="y
+~
+Poisson" style=filled]
+		y_obs [label="y_obs
+~
+Data" shape=box style="rounded, filled"]
+		X_obs [label="X_obs
+~
+Data" shape=box style="rounded, filled"]
+		label="11,732" labeljust=r labelloc=b style=rounded
+	}
+	phi [label="phi
+~
+Beta"]
+	kappa [label="kappa
+~
+Deterministic" shape=box]
+	kappa_log [label="kappa_log
+~
+Exponential"]
+	subgraph cluster32 {
+		theta [label="theta
+~
+Beta"]
+		label=32 labeljust=r labelloc=b style=rounded
+	}
+	y -> y_obs
+	kappa_log -> kappa
+	phi -> theta
+	kappa -> theta
+	theta -> y
+	X_obs -> y
+}
